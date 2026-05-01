@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+#calculator{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+}
+
+.numbers{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
