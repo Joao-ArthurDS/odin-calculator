@@ -8,10 +8,37 @@ body{
     flex-direction: column;
     justify-self: center;
     align-self: center;
+    width: 50vw;
+}
+
+#screen{
+    width: 100%;
+    display: flex;
+}
+
+#operations_group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#numbers_result{
+    display: flex;
+}
+
+#numbers_group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
 }
 
 .numbers{
+    flex: 0 0 33.33%;
+}
+
+#results{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    width: 20%;
 }
