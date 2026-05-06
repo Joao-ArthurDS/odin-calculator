@@ -12,6 +12,10 @@ function checkNumber(e){
     let n = e.target.innerHTML;
     let screen = document.querySelector("#visor");
 
+    if (x!=undefined){
+        screen.value = "";
+    };
+
     if (screen.value == 0 && n != "0"){
         screen.value = String(n);
     } else if (screen.value != 0){
@@ -85,7 +89,7 @@ function finishOperation(e){
         y = undefined;
         firstOperator = undefined;
         screen.value = String(x);
-        x = undefined;
+        // x = undefined;
     };
 
 };
