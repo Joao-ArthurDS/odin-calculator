@@ -5,7 +5,11 @@ body{
     margin: 0 0 0 0;
     background-color: darkolivegreen;
 }
-
+button{
+    background-color: black;
+    border: none;
+    outline: none;
+}
 #calculator{
     display: flex;
     flex-direction: column;
@@ -23,7 +27,7 @@ body{
 #visor{
     flex: 1; 
     font-size: 50px;
-    background-color: darkslategrey;
+    background-color: rgba(0, 0, 139, 0.616);
     color: aliceblue;
     outline: none;
     border: none;
@@ -39,9 +43,10 @@ body{
 }
 
 .operations{
-    width: 25%;
+    width: 24%;
     font-size: large;
     border-radius: 5px;
+    background-color: rgba(255, 140, 0, 0.534);
 }
 
 #numbers_result{
@@ -57,9 +62,11 @@ body{
 }
 
 .numbers{
-    flex: 0 0 33.33%;
+    flex: 0 0 32.6%;
     font-size: x-large;
     border-radius: 6px;
+    color: whitesmoke;
+    margin: 1px;
 }
 
 #finishers_group{
@@ -72,10 +79,13 @@ body{
     flex: 3 1 0;
     font-size: x-large;
     border-radius: 4px;
+    background-color: rgba(255, 255, 0, 0.664);
+    margin-bottom: 2px;
 }
 
 #clear{
     height: 25%;
     font-size: x-large;
     border-radius: 4px;
+    background-color: rgba(255, 255, 0, 0.664);
 }
