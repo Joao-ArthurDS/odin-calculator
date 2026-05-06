@@ -1,9 +1,12 @@
-let x;
+let x,y,operator;
+
 const numbers = document.querySelectorAll('.numbers');
 const operations = document.querySelectorAll('.operations');
+const finishers = document.querySelectorAll('.finishers');
 
 numbers.forEach((number) => number.addEventListener('click',checkNumber));
 operations.forEach((operation) => operation.addEventListener('click',operate));
+finishers.forEach((finisher) => finisher.addEventListener('click',finishOperation));
 
 function checkNumber(e){
     let n = e.target.innerHTML;
@@ -17,15 +20,24 @@ function checkNumber(e){
 };
 
 function operate(e){
-    let y,operation;
-    operation = e.target.id;
-    console.log(z);
+    const screen = document.querySelector("#visor");
+    let operation = e.target.id;
 
     if (x === undefined){
-        x = document.querySelector("#visor").value;
+        x = Number(screen.value);
+        screen.value = String(0);
+        return;
+    } else if (y === undefined){
+        y = Number(screen.value);
+        return;
     } else {
-        y = document.querySelector("#visor").value;
+        
     };
 
+        y = undefined;
+        screen.value = String(x);
+};
 
-}
+function finishOperation(e){
+    let operation = e.target.id;
+};
