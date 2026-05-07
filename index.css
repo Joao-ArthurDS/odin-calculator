@@ -27,11 +27,12 @@ button{
 #visor{
     flex: 1; 
     font-size: 50px;
-    background-color: rgba(0, 0, 139, 0.616);
+    background-color: rgba(0, 0, 139, 0.253);
     color: aliceblue;
     outline: none;
     border: none;
     border-radius: 20px;
+    justify-items: right;
 }
 
 #operations_group{

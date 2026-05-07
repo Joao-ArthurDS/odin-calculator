@@ -1,5 +1,5 @@
 let x,y,firstOperator,secondOperator;
-
+let newNumber = false;
 const numbers = document.querySelectorAll('.numbers');
 const operations = document.querySelectorAll('.operations');
 const finishers = document.querySelectorAll('.finishers');
@@ -12,8 +12,9 @@ function checkNumber(e){
     let n = e.target.innerHTML;
     let screen = document.querySelector("#visor");
 
-    if (x!=undefined){
+    if (newNumber){
         screen.value = "";
+        newNumber = false;
     };
 
     if (screen.value == 0 && n != "0"){
@@ -54,6 +55,7 @@ function operate(e){
         firstOperator = secondOperator;
         secondOperator = undefined;
         y = undefined;
+        newNumber = true;
         screen.value = String(x);
 };
 
@@ -64,6 +66,7 @@ function finishOperation(e){
     if (operation === "clear"){
         x = undefined;
         y = undefined;
+        newNumber = false;
         firstOperator = undefined;
         secondOperator = undefined;
         screen.value = String(0);
@@ -87,6 +90,7 @@ function finishOperation(e){
                 break;
         };
         y = undefined;
+        newNumber = true;
         firstOperator = undefined;
         screen.value = String(x);
         // x = undefined;
