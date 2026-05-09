@@ -4,12 +4,26 @@ const numbers = document.querySelectorAll('.numbers');
 const operations = document.querySelectorAll('.operations');
 const finishers = document.querySelectorAll('.finishers');
 
+window.addEventListener('keydown',checkNumber);
 numbers.forEach((number) => number.addEventListener('click',checkNumber));
 operations.forEach((operation) => operation.addEventListener('click',operate));
 finishers.forEach((finisher) => finisher.addEventListener('click',finishOperation));
 
 function checkNumber(e){
-    let n = e.target.innerHTML;
+    let n;
+    
+    if (e.type === "click"){
+        n = e.target.innerHTML;
+    } else {
+        if (!isNaN(Number(e.key))){
+            n = e.key;
+        } else if (e.key === "," || e.key === "."){
+            n = ".";
+        } else {
+            return;
+        };
+    };
+
     let screen = document.querySelector("#visor");
 
     if (newNumber){
